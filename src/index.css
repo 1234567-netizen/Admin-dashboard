@@ -1,0 +1,319 @@
+/* ----------------------------
+   Global Styles & Fonts
+-----------------------------*/
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #0f172a; /* default text color */
+  background-color: #f1f5f9; /* default bg color */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ----------------------------
+   Layout: Sidebar + Content
+-----------------------------*/
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  color: white;
+  position: fixed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav:hover {
+  background: #2563eb;
+  transform: translateX(5px);
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.nav.active {
+  background: #3b82f6;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  margin-left: 250px; /* sidebar width */
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: flex-start; /* top alignment */
+  background-color: #f1f5f9;
+}
+
+.content-inner {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ----------------------------
+   Dashboard Cards
+-----------------------------*/
+.kpi-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.card p {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ----------------------------
+   Tables
+-----------------------------*/
+.table-page {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 60vh;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.table-page h1 {
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.table tr:hover {
+  background: #e0f2fe;
+  transition: 0.2s;
+}
+
+/* Buttons in tables */
+.edit-btn,
+.delete-btn,
+.approve-btn,
+.reject-btn {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-btn,
+.approve-btn {
+  background-color: #10b981;
+}
+
+.delete-btn,
+.reject-btn {
+  background-color: #ef4444;
+}
+
+/* Status Labels */
+.status {
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+}
+
+.status.pending { background-color: #f59e0b; }
+.status.approved { background-color: #10b981; }
+.status.rejected { background-color: #ef4444; }
+
+/* ----------------------------
+   Responsive
+-----------------------------*/
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    margin-left: 200px;
+    padding: 20px 10px;
+  }
+
+  .nav span {
+    font-size: 0.9rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .edit-btn,
+  .delete-btn,
+  .approve-btn,
+  .reject-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255,255,255,0.87);
+    background-color: #242424;
+  }
+
+  .content {
+    background-color: #1a1a1a;
+  }
+
+  .table-page,
+  .card {
+    background-color: #2b2b2b;
+    color: #ffffff;
+  }
+
+  .table th {
+    background-color: #3b3b3b;
+    color: white;
+  }
+
+  .table tr:hover {
+    background: #3e3e3e;
+  }
+
+  button {
+    background-color: #333;
+    color: white;
+  }
+}

@@ -1,0 +1,155 @@
+/* Full-page background with subtle gradient */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating gradient shapes for modern feel */
+.auth-page::before, .auth-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+.auth-page::before {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  top: -150px;
+  left: -150px;
+}
+.auth-page::after {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #ff7eb9, #ff758c);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Card container */
+.auth-card {
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+  padding: 50px 40px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  text-align: center;
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+}
+
+/* Card title */
+.auth-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 15px 0;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 16px;
+  outline: none;
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.auth-card input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.auth-card input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.25);
+}
+
+/* Buttons */
+.auth-card button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.auth-card button:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Toggle text (login/signup switch) */
+.toggle-text {
+  margin-top: 20px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+}
+
+.toggle-text a {
+  color: #00f2fe;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.toggle-text a:hover {
+  color: #4facfe;
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+.auth-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 40px 25px;
+  }
+  .auth-card h2 {
+    font-size: 28px;
+  }
+  .auth-card input, .auth-card button {
+    padding: 14px;
+    font-size: 15px;
+  }
+}

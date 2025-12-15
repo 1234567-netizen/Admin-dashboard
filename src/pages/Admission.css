@@ -1,0 +1,41 @@
+/* Status Labels */
+.status {
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+}
+
+.status.pending {
+  background-color: #f59e0b; /* yellow/orange */
+}
+
+.status.approved {
+  background-color: #10b981; /* green */
+}
+
+.status.rejected {
+  background-color: #ef4444; /* red */
+}
+
+/* Action Buttons */
+.approve-btn,
+.reject-btn {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.approve-btn {
+  background-color: #10b981; /* green */
+}
+
+.reject-btn {
+  background-color: #ef4444; /* red */
+}

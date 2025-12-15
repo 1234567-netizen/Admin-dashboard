@@ -1,0 +1,75 @@
+/* Sidebar Base */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(180deg,#4facfe,#00f2fe);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+  transition: width 0.3s ease;
+  position: fixed;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-icon {
+  font-size: 18px;
+}
+
+/* Active Link */
+.nav.active {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Hover Effect */
+.nav:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* Responsive - collapse sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+  .nav span {
+    display: none;
+  }
+}
